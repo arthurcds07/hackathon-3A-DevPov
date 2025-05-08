@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DevPov - São Francisco</title>
+    <link rel="stylesheet" href="SF.css" />
+  </head>
+  <body>
+    <header>
+      <h1>São Francisco</h1>
+      <div class="status">
+        <span>XP: <span id="xp">0</span></span>
+        <span>Dinheiro: $<span id="dinheiro">0</span></span>
+      </div>
+    </header>
+
+    <!-- Aplicativos -->
+    <main>
+      <div class="desktop">
+        <div class="app-icon" onclick="abrirApp('Email')">
+          <img src="./Assets/gmail-icon.png" alt="aplicativo-email" />
+          <span>Email</span>
+        </div>
+        <div class="app-icon" onclick="abrirApp('Google')">
+          <img
+            src="./Assets/Google_Chrome_icon_(February_2022).svg.png"
+            alt="aplicativo-google"
+          />
+          <span>Google</span>
+        </div>
+        <div class="app-icon" onclick="abrirApp('VSCode')">
+          <img src="./Assets/vscode_icon.webp" alt="aplicativo-vscode" />
+          <span>VSCode</span>
+        </div>
+        <div class="app-icon" onclick="abrirApp('GitHub')">
+          <img
+            src="./Assets/GitHub_Invertocat_Logo.svg.png"
+            alt="aplicativo-github"
+          />
+          <span>GitHub</span>
+        </div>
+        <div class="app-icon" onclick="abrirApp('Tarefas')">
+          <img src="./Assets/task-list.png" alt="aplicativo-tarefas" />
+          <span>Tarefas</span>
+        </div>
+        <div class="app-icon" onclick="abrirApp('Loja')">
+          <img src="./Assets/loja-removebg-preview.png" alt="aplicativo-loja" />
+          <span>Loja</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Toast de Notificação -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Modais -->
+
+    <!-- Modal Email -->
+    <div id="modal-email" class="modal">
+      <div class="modal-content">
+        <h2>Caixa de Email</h2>
+        <p>Você leu todos os emails importantes.</p>
+        <button onclick="fecharModal()">Fechar</button>
+      </div>
+    </div>
+
+    <!-- Modal Google -->
+    <div id="modal-google" class="modal">
+      <div class="modal-content">
+        <h2>Google</h2>
+        <p>Pesquisas realizadas com sucesso!</p>
+        <button onclick="fecharModal()">Fechar</button>
+      </div>
+    </div>
+
+    <!-- Modal VSCode -->
+    <div id="modal-vscode" class="modal">
+      <div class="modal-content">
+        <h2>VS Code</h2>
+        <p>Você codificou funcionalidades importantes.</p>
+        <button onclick="fecharModal()">Fechar</button>
+      </div>
+    </div>
+
+    <!-- Modal GitHub -->
+    <div id="modal-github" class="modal">
+      <div class="modal-content">
+        <h2>GitHub</h2>
+        <p>Reposítório atualizado com sucesso!</p>
+        <button onclick="fecharModal()">Fechar</button>
+      </div>
+    </div>
+
+    <!-- Modal Tarefas -->
+    <div id="modal-tarefas" class="modal">
+      <div class="modal-content">
+        <h2>Tarefas Disponíveis</h2>
+        <button onclick="completarTask('comprar-dados')">
+          Comprar Base de Dados
+        </button>
+        <button onclick="completarTask('google-dorking')">
+          Fazer Google Dorking
+        </button>
+        <button onclick="completarTask('atualizar-algoritmo')">
+          Atualizar Algoritmo
+        </button>
+        <button onclick="completarTask('debug')">Corrigir Bug no Código</button>
+        <button onclick="completarTask('reuniao')">Reunião Estratégica</button>
+        <button onclick="completarTask('especial-vr')">
+          Missão Especial (VR)
+        </button>
+        <button onclick="fecharModal()">Fechar</button>
+      </div>
+    </div>
+
+    <!-- Modal Loja -->
+    <div id="modal-loja" class="modal">
+      <div class="modal-content">
+        <h2>Loja de Itens</h2>
+        <p>Compre seu equipamento para desbloquear tarefas especiais:</p>
+        <button onclick="comprarItem()">Comprar Óculos VR ($1000)</button>
+        <button onclick="fecharModal()">Fechar</button>
+      </div>
+    </div>
+
+    <!-- Modal Final (Escolha de Fim) -->
+    <div id="modal-final" class="modal">
+      <div class="modal-content">
+        <h2>Chegou o Momento!</h2>
+        <p>Escolha seu destino:</p>
+        <button onclick="escolherFinal('empresa')">Criar Minha Empresa</button>
+        <button onclick="escolherFinal('bigtech')">
+          Trabalhar para uma Big Tech
+        </button>
+      </div>
+    </div>
+
+    <script src="SF.js"></script>
+  </body>
+</html>

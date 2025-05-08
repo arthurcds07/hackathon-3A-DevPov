@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e1e2f;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #292944;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5em;
+}
+
+.status {
+  display: flex;
+  gap: 20px;
+  font-size: 1.1em;
+}
+
+/* Área principal de aplicativos */
+main {
+  flex: 1;
+  padding: 30px;
+  background-color: #202030;
+}
+
+.apps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.apps button {
+  background-color: #505070;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.apps button:hover {
+  background-color: #707090;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modais */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #292944;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 350px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #4fc3f7;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.modal-content button {
+  background-color: #505070;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #707090;
+}
+
+/* Toast de Notificação */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 1001;
+  font-size: 1em;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+.desktop {
+  flex: 1;
+  background-color: #202030;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 40px;
+  align-content: flex-start;
+}
+
+.app-icon {
+  width: 100px !important;
+  height: 100px !important;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.app-icon:hover {
+  background-color: #505070;
+}
+
+.app-icon span {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+img {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.final-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+  color: #333;
+}
+
+.final-screen.sucesso {
+  background: linear-gradient(135deg, #00c853 0%, #b2ff59 100%);
+}
+
+.final-screen.gameover {
+  background: linear-gradient(135deg, #ff6f61 0%, #ffb199 100%);
+}
+
+.container h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #555;
+}
