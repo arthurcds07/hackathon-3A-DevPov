@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevPov - São Leopoldo</title>
+    <link rel="stylesheet" href="sl.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2><span id="nome-jogador">São Leopoldo</span></h2>
+      <div class="info">💰 Dinheiro: $<span id="dinheiro">0</span></div>
+      <div class="info">⭐ XP: <span id="xp">0</span></div>
+    </div>
+    <div class="desktop">
+      <div class="app-icon" onclick="abrirApp('Email')">
+        <img src="../assets/gmail-icon.png" alt="Email" />
+        <span>Email</span>
+      </div>
+      <div class="app-icon" onclick="abrirApp('Google')">
+        <img
+          src="../assets/Google_Chrome_icon_(February_2022).svg.png"
+          alt="Navegador"
+        />
+        <span>Google</span>
+      </div>
+      <div class="app-icon" onclick="abrirApp('VSCode')">
+        <img src="../assets/vscode_icon.webp" alt="VSCode" />
+        <span>VSCode</span>
+      </div>
+      <div class="app-icon" onclick="abrirApp('GitHub')">
+        <img src="../assets/GitHub_Invertocat_Logo.svg.png" alt="GitHub" />
+        <span>GitHub</span>
+      </div>
+      <div class="app-icon" onclick="abrirApp('Tarefas')">
+        <img src="../assets/task-list.png" alt="Tarefas" />
+        <span>Tarefas</span>
+      </div>
+      <div class="app-icon" onclick="abrirApp('Loja')">
+        <img src="../assets/loja-removebg-preview.png" alt="Loja" />
+        <span>Loja</span>
+      </div>
+    </div>
+    <div id="modal-tarefas" class="modal hidden">
+      <div class="modal-content">
+        <span class="close" onclick="fecharModal()">&times;</span>
+        <h2>Fase 1: São Leopoldo</h2>
+        <div id="pergunta-container">
+          <p id="pergunta-texto"></p>
+          <div id="opcoes-container"></div>
+        </div>
+        <button id="proxima-btn" class="hidden" onclick="proximaPergunta()">
+          Próxima Pergunta
+        </button>
+      </div>
+    </div>
+    <script src="sl.js"></script>
+  </body>
+</html>
